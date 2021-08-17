@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BIGO</title>
+    <style>
+        .d-timer{
+            text-align: center;
+            font-size: 24px;
+
+            margin-top: 50px;
+        }
+        #timer{
+            margin: 0 10px 0 0;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-timer">使用成功！将在
+        <span id="timer">1</span>秒后跳转到我的服务
+    </div>
+    
+    <script>
+        var div = document.getElementById('timer');
+        var time = 5;
+        timer();
+        setInterval(timer, 1000);
+
+        function timer() {
+            if (time == 0) {
+                location.href = 'https://fuwu.taobao.com/ser/detail.htm?spm=0.0.0.0.T6pRHI&service_code=FW_GOODS-1958386'
+            } else {
+                div.innerHTML =  time;
+                time--;
+            }
+        }
+    </script>
+</body>
+
+</html>
